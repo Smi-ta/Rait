@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Seller profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="seller_css/w3.css">
+<link rel="stylesheet" href="seller_css/w3-theme-deep-purple.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="w3-theme-l5">
+<!-- JavaScript -->
+  <script>
+  function DropdownFunc(x) {
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+          x.previousElementSibling.className += " w3-theme-l3";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+          x.previousElementSibling.className =
+          x.previousElementSibling.className.replace("w3-theme-l3", "");
+        }
+      }
+      function w3_open() {
+            document.getElementById("mySidenav").style.display = "block";
+        }
+      function w3_close() {
+            document.getElementById("mySidenav").style.display = "none";
+        }
+
+        <!-- Tabs working script -->
+        function TabWorking() {
+
+        }
+        <!-- Tabs working script End -->
+
+  </script>
+<!-- JavaScript End -->
+<!-- Side nav bar -->
+<nav class="w3-sidenav w3-collapse w3-card-2 w3-theme-d1 w3-animate-left" style="width:200px;" id="mySidenav">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large w3-hide-large">Close &times;</a>
+    <br>
+
+    <!-- ProfileImage Part -->
+    <div class=" w3-center w3-container">
+      <img src="images/profile.png" class="w3-image w3-circle w3-card-4" width="70" height="70">
+      <p>Jasen</p>
+      <hr>
+    </div>
+    <!-- ProfileImage Part End -->
+
+    <a href="#"><i class="fa fa-tags"></i> Home</a>
+    <a href="seller_profile.html"><i class="fa fa-address-book"></i> My Profile</a>
+    <a href="#"><i class="fa fa-envelope"></i> Notifications </a>
+
+    <a href="seller_orders.html"><i class="fa fa-pencil-square-o"></i> Orders </a>
+    <div class="w3-accordion">
+      <a onclick="DropdownFunc(productsInsideLink)" href="#">
+      <i class="fa fa-shopping-cart"></i> Products <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="productsInsideLink" class="w3-accordion-content w3-theme-l4">
+      <a href="seller_add_product.html"><i class="fa fa-angle-right"></i> Add New Product</a>
+      <a href="seller_all_product.html"><i class="fa fa-angle-right"></i> All Products</a>
+      </div>
+    </div>
+    <div class="w3-accordion">
+      <a onclick="DropdownFunc(paymentsInsideLink)" href="#">
+      <i class="fa fa-credit-card"></i> Payments <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="paymentsInsideLink" class="w3-accordion-content w3-theme-l4">
+      <a href="seller_transactions.html"><i class="fa fa-angle-right"></i> Transactions</a>
+      <a href="seller_invoice_list.html"><i class="fa fa-angle-right"></i> Invoice</a>
+      </div>
+    </div>
+    <a href="seller_return_product_list.html"><i class="fa fa-refresh"></i> Returns </a>
+    <a href="#"><i class="fa fa-star"></i> Promotions </a>
+    <a href="#"><i class="fa fa-television"></i> Advertisment </a>
+    <a href="#"><i class="fa fa-graduation-cap"></i> Learning Center </a>
+    <a href="#"><i class="fa fa-phone-square"></i> Support</a>
+    <a href="#"><i class="fa fa-newspaper-o"></i> Terms Of Use</a>
+
+</nav>
+
+<!-- Side nav bar End -->
+<!-- Main work area -->
+<div class="w3-main" style="margin-left:200px">
+    <!-- Header part -->
+    <header class="w3-container w3-border-bottom w3-border-deep-purple">
+      <span class="w3-opennav w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</span>
+      <h2>LOGO</h2>
+    </header>
+    <!-- Header part End -->
+    <!-- Container part -->
+    <!-- Alert and all in future part -->
+      <div class="w3-container">
+        <div class="w3-panel w3-yellow">
+           <span onclick="this.parentElement.style.display='none'" class="w3-closebtn w3-hover-text-red">&times;</span>
+           <p>Alert Part : Alert related order if done somthing wrong or ....</p>
+       </div>
+      </div>
+    <!-- Alert and all in future part End -->
+    <!-- sections part -->
+          <div class=" w3-white" style="margin:1%">
+            <header class="w3-container">
+              <div class="w3-row w3-padding-8 w3-center">
+                <a href="javascript:void(0)" onclick="TabWorking();">
+                  <div class="w3-third tablink w3-bottombar w3-hover-border-yellow w3-padding"><b>Electronics</b></div>
+                </a>
+                <a href="javascript:void(0)" onclick="TabWorking();">
+                  <div class="w3-third tablink w3-bottombar w3-hover-border-yellow w3-padding"><b>Fashion & accessories</b></div>
+                </a>
+                <a href="javascript:void(0)" onclick="TabWorking();">
+                  <div class="w3-third tablink w3-bottombar w3-hover-border-yellow w3-padding"><b>Books & More</b></div>
+                </a>
+              </div>
+            </header>
+            <br>
+            <div class="w3-container">
+              <div class="w3-row">
+              <div class="w3-third w3-container">
+                <h2>w3-third</h2>
+              </div>
+              <div class="w3-third w3-container">
+                <h2>w3-third</h2>
+              </div>
+              <div class="w3-third w3-container">
+                <h2>w3-third</h2>
+              </div>
+              </div>
+            </div>
+
+            <footer class="w3-container w3-padding-8">
+
+            </footer>
+          </div>
+    <!-- sections part End -->
+  <!-- Container part End -->
+  </div>
+<!-- Main work area End -->
+
+</body>
+</html>
